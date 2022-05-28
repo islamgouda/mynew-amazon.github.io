@@ -1,0 +1,205 @@
+<head>
+    <link rel="stylesheet" href="learning/navcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<style>
+    *
+    {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .hero
+    {
+        height:60px;
+        width: 100%;
+        background-color: rgb(245, 240, 250);
+    }
+    .navbar
+    {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        background-color: black;
+        color: white;
+    }
+    img
+    {
+        height: 60px;
+    }
+    .item
+    {
+    padding-bottom: 1px;
+    padding-right: 0;
+    margin: 10px 10px 10px 10px;
+    }
+    .item:hover
+    {
+        border: 1px solid white;
+    }
+    nav input
+    {
+        width:760px;
+        padding: 10px;
+        font-size: 17;
+        border: none;
+        outline: none;
+        color: #000;
+    }
+    nav button
+    {
+       padding: 10px 10px;
+       color: #000;
+       font-size: 17px;
+       border: none;
+       border-radius: 5px 0px 0px 5px;
+       cursor: pointer;
+    }
+    .isearch
+    {
+        padding-bottom: 1px;
+        padding-right: 0;
+        margin: 0px 0px 0px 0px;
+    }
+    .searchbtn
+    {
+        background-color: orange;
+        margin-left: -5px;
+        padding-top:8px;
+        height: 41px;
+        border-radius: 0px 5px 5px 0px;
+    }
+    .subnavigation
+    {
+        height: 40px;
+        background-color: rgba(109, 73, 73, 0.473);
+        color: white;
+    }
+    .subnavmenu
+    {
+        color: #000;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .subnavmenu li
+    {
+        display: inline;
+        text-align: center;
+        float: left;
+    }
+    li a
+    {
+        display: inline;
+        padding: 0px;
+        margin: 8px; 
+        text-decoration: none;
+        text-align: center;
+        color: white;
+    }
+    li a:hover
+    {
+        border: 1px solid white;
+    }
+    
+    
+    
+</style>
+<body>
+<div class="hero">
+<nav class="navbar">
+ <div><a href="#"><img src="Amazon-Logo.jpg" alt="logo" class="logo"></a></div>
+  <div class="item">
+    <p>Deliver to</p>
+    <h5>Address</h5>
+   </div>    <div class="item">
+             <button class="all" type="button">all<i class="fa fa-sort-desc"></i>
+             </button>
+             <input type="text">
+             <button class="searchbtn" type="submit"><i class="fa fa-search"></i>
+             </button>
+            </div>
+   <div class="item">
+       <div class="submenu">
+       <i class="fa fa-flag"></i>
+       <i class="fa fa-sort-desc"></i>
+       </div>
+    </div>
+   <div class="item" >
+    <p>Hello,sign in</p>
+    <h5>Account&lists</h5>
+   </div>
+   <div class="item">
+    <p>Returns</p>
+    <h5>&Orders</h5>
+   </div>
+   <div class="item">
+    <i class="fa fa-cart-plus" >Cart</i>
+   </div>
+</nav>
+</div>
+<div class="navbar2">
+    <a href="javascript:void(0)" onclick="openNav()"><i class="fa fa-list" ></i>All</a>
+    <a href="#"> Today's Deals</a>
+    <a href="#"> Customer Service</a>
+    <a href="#"> Registery</a>
+    <a href="#"> Gift Cards</a>
+    <a href="#"> Sell</a>
+  </div>
+  <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <ul>
+  <li><h1>Digital Content&Devices</h1></li>
+  <li>
+      <a href="#" onclick="openNestedSidebar()">Amazon Music<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    <div class="hiddenmenu" id="myss">
+      <ul>
+        <li><a style="padding:10px;" href="#" onclick="closeNestedSidebar()">Main Menu<i style="float:left;" class="fa fa-arrow-left" aria-hidden="true"></i></a></li>  
+        <li><a href="Amazon_Music_Unlimited.html">Amazon Music Unlimited</a></li>
+        <li><a href="Amazon_Music_Free_stream.html">Free Streaming Music </a></li>
+        <li><a href="Amazon_Music_Podcast.html">Podcasts</a></li>
+        <li><a href="#">Open Web Player</a></li>
+        <li><a href="#">Download the App</a></li>
+      </ul>
+    </div>
+    
+  </li>
+  <li><a href="#">Kindle E-readers&Books <i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">Amazon Live<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">App Store for android<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><h1>Shop By Department</h1></li>
+  <li><a href="#">Electronics<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">Computers<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">Smart Home<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">Arts $ Crafts<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><h1>Programs & Features</h1></li>
+  <li><a href="#">Gift Cards<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">#FounditOnAmazon<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">Amazon live<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><a href="#">international Shopping<i style="float: right;" class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+  <li><h1>Help &Settings</h1></li>
+  <li><a href="#">Your Account</a></li>
+  <li><a href="#">English</a></li>
+  <li><a href="#">United States</a></li>
+  <li><a href="#">Customer service </a></li>
+  <li><a href="#">sign in</a></li>
+</ul>
+    
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+function openNestedSidebar() {
+  document.getElementById("myss").style.width = "350px";
+}
+function closeNestedSidebar() {
+  document.getElementById("myss").style.width = "0";
+}
+</script>
+</body>
